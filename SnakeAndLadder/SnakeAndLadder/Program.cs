@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using SnakeAndLadder;
+SnakeGame Game = new SnakeGame();
+int num = Game.DieRoll();
+Console.WriteLine(num);
