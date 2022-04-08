@@ -18,17 +18,28 @@ namespace SnakeAndLadder
         }
         public void GAME()
         {
-            Random random = new Random();
-            int roll = random.Next(1, 7);
-            switch (roll)
+            while (this.position < 100)
             {
-                case NO_PLAY: this.position += 0;
-                    break;
-                case SNAKE: this.position -= this.DieRoll();
-                    break;
-                case LADDER: this.position += this.DieRoll();
-                    break;
+                Random random = new Random();
+                int roll = random.Next(1, 7);
+                switch (roll)
+                {
+                    case NO_PLAY:
+                        this.position += 0;
+                        break;
+                    case SNAKE:
+                        this.position -= this.DieRoll();
+                        if (this.position < 0)
+                        {
+                            this.position = 0;
+                        }
+                        break;
+                    case LADDER:
+                        this.position += this.DieRoll();
+                        break;
+                }
             }
+            Console.WriteLine("the position is : " +this.position);
         }
     }
 }

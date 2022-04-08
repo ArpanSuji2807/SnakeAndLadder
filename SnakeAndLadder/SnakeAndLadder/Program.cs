@@ -1,4 +1,3 @@
 ﻿using SnakeAndLadder;
 SnakeGame Game = new SnakeGame();
-int roll = Game.DieRoll();
-Console.WriteLine("you got :" +roll);
+Game.GAME();
