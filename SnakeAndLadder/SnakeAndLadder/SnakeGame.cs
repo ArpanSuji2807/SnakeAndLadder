@@ -35,7 +35,12 @@ namespace SnakeAndLadder
                         }
                         break;
                     case LADDER:
-                        this.position += this.DieRoll();
+                        int num = this.DieRoll();
+                        this.position += num;
+                        if (this.position > 100)
+                        {
+                            this.position -= num;
+                        }
                         break;
                 }
             }

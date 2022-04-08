@@ -1,3 +1,3 @@
 ﻿using SnakeAndLadder;
-SnakeGame Game = new SnakeGame();
-Game.GAME();
+SnakeGame Game1 = new SnakeGame();
+Game1.GAME();
