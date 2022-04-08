@@ -8,7 +8,7 @@ namespace SnakeAndLadder
 {
     public class SnakeGame
     {
-        int position = 0;
+       const int position = 0;
         public int DieRoll()
         {
             Random random = new Random();

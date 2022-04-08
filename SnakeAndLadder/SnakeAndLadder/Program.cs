@@ -1,4 +1,4 @@
 ﻿using SnakeAndLadder;
 SnakeGame Game = new SnakeGame();
-int num = Game.DieRoll();
-Console.WriteLine(num);
+int roll = Game.DieRoll();
+Console.WriteLine(roll);
