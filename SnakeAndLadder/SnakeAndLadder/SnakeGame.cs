@@ -9,7 +9,7 @@ namespace SnakeAndLadder
     public class SnakeGame
     {
        const int NO_PLAY = 0, SNAKE = 1, LADDER = 2;
-        int position = 0, count = 0;
+        int position = 0, count = 0, player1 = 0, player2 = 0;
         public int DieRoll()
         {
             Random random = new Random();
@@ -47,6 +47,24 @@ namespace SnakeAndLadder
             }
             Console.WriteLine("The no. of times dice played to win : "+" "+count);
             Console.WriteLine("the position is : " + this.position);
+        }
+        public void TwoPlayers()
+        {
+            player1= this.DieRoll();
+            Console.WriteLine("Roll for Player1");
+            if (player1 <= 100)
+            {
+                Console.WriteLine("Player1 is the winner");
+            }
+            else
+            {
+                player2 = this.DieRoll();
+                Console.WriteLine("Roll of player2");
+                if (player2 <= 100)
+                {
+                    Console.WriteLine("Player2 is the winner");
+                }
+            }
         }
     }
 }
