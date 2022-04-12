@@ -16,12 +16,12 @@ namespace SnakeAndLadder
             int diePosition = random.Next(1, 7);
             return diePosition;
         }
-        public void GAME()
+        public int GAME()
         {
             while (this.position < 100)
             {
                 Random random = new Random();
-                int roll = random.Next(1, 7);
+                int roll = random.Next(0,3);
                 switch (roll)
                 {
                     case NO_PLAY:
@@ -35,34 +35,45 @@ namespace SnakeAndLadder
                         }
                         break;
                     case LADDER:
-                        int num = this.DieRoll();
-                        this.position += num;
+                        this.position += this.DieRoll();
                         if (this.position > 100)
                         {
-                            this.position -= num;
+                            this.position -= this.DieRoll();
                         }
                         break;
-                }
+                }            
                 count++;
             }
             Console.WriteLine("The no. of times dice played to win : "+" "+count);
             Console.WriteLine("the position is : " + this.position);
+            return position;
         }
         public void TwoPlayers()
         {
-            player1= this.DieRoll();
-            Console.WriteLine("Roll for Player1");
-            if (player1 <= 100)
+            Random random = new Random();
+            int check = random.Next(0,2);
+            if (check == 0)
             {
-                Console.WriteLine("Player1 is the winner");
+                 player1 = GAME();
             }
             else
             {
-                player2 = this.DieRoll();
-                Console.WriteLine("Roll of player2");
-                if (player2 <= 100)
+                 player2 = this.GAME();
+            }
+            while(player1<100 && player2<100)
+            {
+                this.player1 = this.GAME();
+                if (this.player1 == 100)
                 {
-                    Console.WriteLine("Player2 is the winner");
+                    Console.WriteLine("Player1 wins the Game");
+                }
+                else
+                {
+                    this.player1 = this.GAME();
+                }
+                if (player2 == 100)
+                {
+                    Console.WriteLine("player2 wins the Game");
                 }
             }
         }

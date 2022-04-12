@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeAndLadder", "SnakeAndLadder\SnakeAndLadder.csproj", "{D3918A97-4C07-429B-9394-0872EDA0D95E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakeAndLadder", "SnakeAndLadder\SnakeAndLadder.csproj", "{D3918A97-4C07-429B-9394-0872EDA0D95E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E9236AD5-24C3-4504-B8A4-F582E63DD458}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
